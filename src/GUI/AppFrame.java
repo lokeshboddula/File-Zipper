@@ -16,21 +16,26 @@ public class AppFrame extends JFrame implements ActionListener {
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(null);
+        this.setTitle("File Zipper");
+        this.setLocation(400, 200);
         compressButton = new JButton("select files to compress");
-        compressButton.setBounds(30, 100, 200, 30);
+        compressButton.setBounds(30, 100, 200, 50);
         compressButton.addActionListener(this);
 
-
         decompressButton = new JButton("select files to decompress");
-        decompressButton.setBounds(250, 100, 200, 30);
+        decompressButton.setBounds(250, 100, 200, 50);
         decompressButton.addActionListener(this);
 
 
         this.add(compressButton);
         this.add(decompressButton);
-        this.setSize(1000, 500);
-        this.getContentPane().setBackground(Color.LIGHT_GRAY);
+        this.setSize(500, 300);
+        this.getContentPane().setBackground(Color.decode("#413290"));
+        Image icon = Toolkit.getDefaultToolkit().getImage("C:/Users/Hp/Downloads/12.png");
+        this.setIconImage(icon);
         this.setVisible(true);
+
+
     }
 
 
