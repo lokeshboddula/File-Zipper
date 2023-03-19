@@ -15,16 +15,12 @@ public class Decompressor {
         FileOutputStream fos = new FileOutputStream(fileDirectory + "/decompressed");
         byte[] buffer = new byte[1024];
         int len;
-        while((len = gis.read(buffer)) != -1) {
+        while ((len = gis.read(buffer)) != -1) {
             fos.write(buffer, 0, len);
         }
         gis.close();
         fos.close();
         fis.close();
-    }
-    public static void main(String[] args) throws IOException {
-        File path = new File("");
-        method(path);
     }
 
 }
